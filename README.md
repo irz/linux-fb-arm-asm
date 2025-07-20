@@ -1,11 +1,13 @@
-# Working with Linux Framebuffer using ARMv7 assembly
-I wanted to practice working with framebuffer on custom board running on i.MX6DL using ARM ASM.
-The goal was to render Mandelbrot set using scalar floating point instructions and play with NEON SIMD/vector extension.
+# Working with Linux Framebuffer using ARMv7 assembly and NEON
+This repo contains Mandelbrot set renderer implemented in ARM assembly for [G3 display module](https://www.reachtech.com/products/touchscreen-display-modules/g3-modules/) (a custom i.MX6DL-based embedded board running Linux).
+The rendering is directly to the Linux framebuffer using syscalls from asm. 
+The project includes both scalar implementation using ARM floating-point instructions and optimized version using NEON SIMD for vectorized computation. 
+It serves as a demonstration of direct framebuffer access, performance tuning and use of NEON extensions for parallelism in graphics workloads.
 
 ## Contents
 **getfbinfo.c**
 
-Basic code to query Linux framebuffer settings like resolution and LCD pixel format. This knowledge will come in handy when writing ASM.\
+Basic code to query Linux framebuffer settings like resolution and LCD pixel format. This knowledge will come in handy when writing asm.\
 To build run _make getfbinfo_
 
 **mandelbrot.s**
