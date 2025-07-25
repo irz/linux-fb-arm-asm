@@ -1,8 +1,9 @@
 # Working with Linux Framebuffer using ARMv7 assembly and NEON
 This repo contains Mandelbrot set renderer implemented in ARM assembly for [G3 display module](https://www.reachtech.com/products/touchscreen-display-modules/g3-modules/) (a custom i.MX6DL-based embedded board running Linux).
-The rendering is directly to the Linux framebuffer using syscalls from asm. 
+The rendering is directly to the Linux framebuffer using syscalls from asm.\
 The project includes both scalar implementation using ARM floating-point instructions and optimized version using NEON SIMD for vectorized computation. 
 It serves as a demonstration of direct framebuffer access, performance tuning and use of NEON extensions for parallelism in graphics workloads.
+![fract](https://github.com/user-attachments/assets/78f3e3c7-0de8-47eb-bebd-abe42b79ad5d)
 
 ## Contents
 **getfbinfo.c**
