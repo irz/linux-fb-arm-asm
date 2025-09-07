@@ -25,6 +25,9 @@ mandelbrot: mandelbrot.s
 mandelbrot-neon: mandelbrot-neon.s
 	$(CC) $(ASFLAGS) -o $@ $<
 
+gettime: gettime.s
+	$(CC) $(ASFLAGS) -o $@ $<
+
 clean:
 	rm -f getfbinfo mandelbrot mandelbrot-neon
 
